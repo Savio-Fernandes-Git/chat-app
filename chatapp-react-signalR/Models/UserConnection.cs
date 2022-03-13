@@ -1,0 +1,13 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace chatapp_react_signalR.Models
+{
+    public class UserConnection
+    {
+        public string User { get; set; }
+        public string Room { get; set; }
+    }
+}

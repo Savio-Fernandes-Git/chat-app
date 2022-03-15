@@ -1,4 +1,5 @@
 using chatapp_react_signalR.Hubs;
+using chatapp_react_signalR.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +15,8 @@ builder.Services.AddCors(options =>
             .AllowCredentials();
     });
 });
+
+builder.Services.AddSingleton<IDictionary<string,UserConnection>>(opt => new Dictionary<string,UserConnection>());
 
 var app = builder.Build();
 
